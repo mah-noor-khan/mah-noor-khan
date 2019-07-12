@@ -5,6 +5,19 @@
 <meta http-equiv="refresh" content="604800">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="headericon.ico" />
+<script>
+var i = 0;
+var txt = 'Hello, This is Mahnoor Khan.';
+var speed = 200;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 </head>
 
 <style>
@@ -42,7 +55,7 @@ body {
   max-height: 0%;
 }
 .button{
-font-size: 25px;
+font-size: 20px;
 border-radius: 8px;
 border: 6px solid #4CAF50;
 
@@ -55,7 +68,7 @@ box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;
 }
 </style>
 
-<body>
+<body onload="typeWriter()">
 
 
 <video muted loop autoplay id="noorintro">
@@ -69,7 +82,8 @@ box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;
 </video>
 
 <div class="content">
-<h1>Hello, This is Mahnoor Khan</h1>
+
+<p id="demo"></p>
 
 <button class="button" onclick="redirecttome()">Check My Profile</button>
 
