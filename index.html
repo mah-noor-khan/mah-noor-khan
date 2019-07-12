@@ -28,15 +28,30 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 50%; 
-  min-height: 50%;
+  max-width: 100%; 
+  min-width: 100%; 
+  min-height: 100%;
 }
+
+#noorintro {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 0%;  
+  max-height: 0%;
+}
+
 </style>
 
 <body>
 
 
-<video autoplay loop id="noorintro">
+<video muted loop autoplay id="noorintro">
+  <source src="noor.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<video loop autoplay id="noorintro2">
   <source src="noor.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
