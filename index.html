@@ -12,7 +12,7 @@ var speed = 200;
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
+    document.getElementById("intro").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
@@ -25,6 +25,7 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+  background: black;
 }
 
 
@@ -70,20 +71,20 @@ box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;
 
 <body onload="typeWriter()">
 
+<audio autoplay loop>
+  <source src="noor.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
 <video muted loop autoplay id="noorintro">
-  <source src="noor.mp4" type="video/mp4">
+  <source src="noor480.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
-<video loop autoplay>
-  <source src="noor.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
 
 <div class="content">
 
-<p id="demo"></p>
+<p id="intro"></p>
 
 <button class="button" onclick="redirecttome()">Check My Profile</button>
 
