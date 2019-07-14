@@ -70,11 +70,12 @@ box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 white;
 </style>
 
 <body onload="typeWriter()">
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
-<audio autoplay loop>
-  <source src="noor.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
+<audio id="player" autoplay loop>
+    <source src="noor.mp3" type="audio/mp3">
 </audio>
+
 
 <video muted loop autoplay id="noorintro">
   <source src="noor480.mp4" type="video/mp4">
