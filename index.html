@@ -3,6 +3,7 @@
 </title>
 <head>
 <meta http-equiv="refresh" content="604800">
+<meta name="theme-color" content="#fa0000" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -29,9 +30,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
+<script>
+function overlay() {
+  document.getElementById("body").style= "background-image: url(img1.jpg), linear-gradient(rgba(255, 0, 0,1),rgba(255, 0, 0,1));";
+  }
+</script>
 </head>
-<body>
+<body id="body" onload="">
 <div class="w3-display-middle w3-text-white w3-center">
 <div class="container">
 <div class="noortitle" style="text-shadow: 2pt 1pt 2pt white; !important;"><center><b>Mahnoor Khan</b></center></div>
@@ -41,7 +46,7 @@
 <div class="container" style="top:300px">
 
 <center><p><b><font size="4" color="white">Hello, My name is Mahnoor Khan. Thank you for visiting my page.</font></b></p></center>
-
+<center><button onclick="overlay()"  style="visibility: hidden;">Red Overlay</button></center>
 </div>
 </div>
 
