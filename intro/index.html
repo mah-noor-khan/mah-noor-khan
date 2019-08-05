@@ -1,0 +1,100 @@
+<html lang="en-US">
+<title>Mahnoor Khan
+</title>
+<head>
+<meta http-equiv = "refresh" content = "12; url = https://mah-noor-khan.github.io/noor/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="headericon.ico" />
+<script>
+var i = 0;
+var txt = 'Hello, This is Mahnoor Khan.';
+var speed = 200;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("intro").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+</head>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background: black;
+}
+
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+#noorintro {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 100%; 
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+#noorintro {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 0%;  
+  max-height: 0%;
+}
+.button{
+font-size: 20px;
+border-radius: 6px;
+border: 6px solid #4CAF50;
+
+transition-duration: 0.4s;
+
+}
+
+.button:hover{
+box-shadow: 0 8px 16px 0 white, 0 4px 15px 0 white;
+}
+</style>
+
+<body onload="typeWriter()">
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+<audio id="player" autoplay loop>
+    <source src="noor.mp3" type="audio/mp3">
+</audio>
+
+
+<video muted loop autoplay id="noorintro">
+  <source src="noor480.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+<div class="content">
+
+<p id="intro"></p>
+
+<button class="button" onclick="redirecttome()">Check My Profile</button>
+
+<script>
+function redirecttome() {
+  location.replace("https://mah-noor-khan.github.io/noor/")
+}
+</script>
+
+</div>
+</body>
+</html>
