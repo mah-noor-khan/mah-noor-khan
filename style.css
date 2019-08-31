@@ -3,9 +3,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url(img1.jpg);
-	/*background-image: url(img1.jpg), linear-gradient(rgba(4, 84, 212,1),rgba(4, 84, 212,1));   */
-    background-blend-mode: multiply;
 	height: 100%; 
 	background-attachment: fixed;
 	background-position: center;
@@ -16,7 +13,18 @@ body {
 	
 }
 
-  
+
+#Noor {background-color: red;background-image: url(img1.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
+#Haider {background-color: green;}
+#Esha {background-color: pink;}
+#Mom {background-color: orange;}
+#Dad {background-color: purple;}
+
+
+@media print {
+  h1 {page-break-before: always;}
+}
+
 .noortitle {
 	position: relative;
 	font-variant: small-caps;
@@ -37,14 +45,14 @@ a:hover {
 
 div.fixed2 {
 	position: fixed;
-	right: 200px;
+	right: 130px;
 	top:200px;
 	z-index: 10;
 }
 
 #mySidenav2 a {
     position: absolute;
-    right: -140px;
+    right: -120px;
     transition: 0.5s;
     text-decoration: none;
     font-size: 18px;
@@ -56,7 +64,7 @@ div.fixed2 {
 }
 
 #mySidenav2 a:hover {
-    right: -130px;
+    right: -110px;
 	font-size: 20px;
 	box-shadow: 0 0 6pt 4pt black;
 	z-index: 11;
@@ -99,5 +107,4 @@ div.fixed2 {
 	font-size: 12px;
 	font-weight: bold;
 }
-
 

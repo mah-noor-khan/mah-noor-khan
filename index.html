@@ -2,7 +2,6 @@
 <title>Mahnoor Khan
 </title>
 <head>
-<meta http-equiv="refresh" content="604800">
 <meta name="theme-color" content="#fa0000" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,14 +29,47 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<script>
-function overlay() {
-  document.getElementById("body").style= "background-image: url(img1.jpg), linear-gradient(rgba(255, 0, 0,1),rgba(255, 0, 0,1));";
-  }
-</script>
+<style>
+* {box-sizing: border-box}
+
+
+/* Style tab links */
+.tablink {
+  background-color: black;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+</style>
 </head>
-<body id="body" onload="">
-<div class="w3-display-middle w3-text-white w3-center">
+<body id="body">
+<button class="tablink" onclick="openPage('Esha', this, 'pink'); testmeta3()">Esha</button>
+<button class="tablink" onclick="openPage('Haider', this, 'green'); testmeta2()">Haider</button>
+<button class="tablink" onclick="openPage('Noor', this, 'red'); testmeta1()" id="defaultOpen">Noor</button>
+<button class="tablink" onclick="openPage('Mom', this, 'orange'); testmeta4()">Mom</button>
+<button class="tablink" onclick="openPage('Dad', this, 'purple'); testmeta5()">Dad</button>
+
+<div id="Noor" class="tabcontent">
+  <div class="w3-display-middle w3-text-white w3-center">
 <div class="container">
 <div class="noortitle" style="text-shadow: 2pt 1pt 2pt white; !important;"><center><b>Mahnoor Khan</b></center></div>
 </br>
@@ -46,8 +78,28 @@ function overlay() {
 <div class="container" style="top:300px">
 
 <center><p><b><font size="4" color="white">Hello, My name is Mahnoor Khan. Thank you for visiting my page.</font></b></p></center>
-<center><button onclick="overlay()"  style="visibility: hidden;">Red Overlay</button></center>
 </div>
+</div>
+</div>
+
+<div id="Haider" class="tabcontent">
+  <h3>Haider</h3>
+  <p>Haider mujhe sabse pyara lgta hai.</p> 
+</div>
+
+<div id="Esha" class="tabcontent">
+  <h3>Esha</h3>
+  <p>Esha is sweet.</p>
+</div>
+
+<div id="Mom" class="tabcontent">
+  <h3>Mom</h3>
+  <p>The best mom in the world.</p>
+</div>
+
+<div id="Dad" class="tabcontent">
+  <h3>Dad</h3>
+  <p>Love of my life. My dad.</p>
 </div>
 
 <div class="fixed2">
@@ -62,5 +114,49 @@ function overlay() {
 </div>
 
 
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function testmeta1(){
+document.getElementsByTagName("META")[0].content = "red";
+}
+
+function testmeta2(){
+document.getElementsByTagName("META")[0].content = "green";
+}
+
+function testmeta3(){
+document.getElementsByTagName("META")[0].content = "pink";
+}
+
+
+function testmeta4(){
+document.getElementsByTagName("META")[0].content = "orange";
+}
+
+function testmeta5(){
+document.getElementsByTagName("META")[0].content = "purple";
+}
+
+
+</script>
 </body>
-</html>
+</html> 
+    
+    
