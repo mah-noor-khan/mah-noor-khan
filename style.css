@@ -14,18 +14,19 @@ body {
 }
 
 
-#Noor {background-color: red;background-image: url(img1.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
-#Haider {background-color: green;}
-#Esha {background-color: pink;}
-#Mom {background-color: orange;}
-#Dad {background-color: purple;}
+
+#Noor {background-color: #E20516;background-image: url(img1.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
+#Haider {background-color: #10F59A;background-image: url(img12.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
+#Esha {background-color: #90D634;background-image: url(img11.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
+#Mom {background-color: #E27F2C;background-image: url(img10.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
+#Dad {background-color: #36878A;background-image: url(img13.jpg);background-attachment: fixed;background-position: center;background-size: cover;}
 
 
 @media print {
   h1 {page-break-before: always;}
 }
 
-.noortitle {
+.nametitle {
 	position: relative;
 	font-variant: small-caps;
 	font-size: 60px;
@@ -43,68 +44,56 @@ a:hover {
 }
 
 
+
 div.fixed2 {
 	position: fixed;
-	right: 130px;
-	top:200px;
+	right: 10px;
+	bottom:0px;
 	z-index: 10;
 }
 
+
 #mySidenav2 a {
     position: absolute;
-    right: -120px;
+    bottom: 10px;
     transition: 0.5s;
     text-decoration: none;
     font-size: 18px;
-    text-align: left;
+    text-align: bottom;
     color: white;
     border-radius: 20px 20px 20px 20px;
-	box-shadow: 0 0 6pt 4pt white;
+	box-shadow: 0 0 6pt 4pt black;
 	text-shadow: 2pt 4pt 3pt white;
 }
 
 #mySidenav2 a:hover {
-    right: -110px;
+    bottom: 12px;
 	font-size: 20px;
-	box-shadow: 0 0 6pt 4pt black;
+	box-shadow: 0 0 6pt 4pt white;
 	z-index: 11;
 }
 
 
 #Linkedin2 {
-    top: 5px;
+    right: 5px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 #Instagram2 {
-    top: 60px;
+    right: 60px;
 	background-repeat: no-repeat;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-#Facebook2 {
-    top: 115px;
-	font-size: 12px;
-	font-weight: bold;
-}
 
 #Email2 {
-    top: 170px;
+    right: 115px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-#Twitter2 {
-	top:225px;
-	font-size: 12px;
-	font-weight: bold;
-}
 
-#Skype2 {
-	top:280px;
-	font-size: 12px;
-	font-weight: bold;
-}
+
 
